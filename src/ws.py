@@ -25,10 +25,10 @@ def clear():
     os.system('cls')
 
 # ################################################################
-# Purpose:
+# Purpose: ASCII LOGOS!!
 # ################################################################
 
-def printasciiart():
+def printasciiarttitle():
     print('''
      _       ___ __         _____           _       __
     | |     / (_) /_  ___  / ___/__________(_)___  / /_
@@ -36,6 +36,28 @@ def printasciiart():
     | |/ |/ / / /_/ /  __/ __/ / /__/ /  / / /_/ / /_
     |__/|__/_/_.___/\___//____/\___/_/  /_/ .___/\__/
                                          /_/           ''')
+
+def printasciiartportscanner():
+    print('''
+ _____           _    _____
+|  __ \         | |  / ____|
+| |__) |__  _ __| |_| (___   ___ __ _ _ __  _ __   ___ _ __
+|  ___/ _ \| '__| __|\___ \ / __/ _` | '_ \| '_ \ / _ \ '__|
+| |  | (_) | |  | |_ ____) | (_| (_| | | | | | | |  __/ |
+|_|   \___/|_|   \__|_____/ \___\__,_|_| |_|_| |_|\___|_|
+                                                            ''')
+def printasciiartippinger():
+    print('''
+ _____ _____  _____ _
+|_   _|  __ \|  __ (_)
+  | | | |__) | |__) | _ __   __ _  ___ _ __
+  | | |  ___/|  ___/ | '_ \ / _` |/ _ \ '__|
+ _| |_| |    | |   | | | | | (_| |  __/ |
+|_____|_|    |_|   |_|_| |_|\__, |\___|_|
+                             __/ |
+                            |___/                  ''')
+
+
 
 # ################################################################
 # Purpose: Password protection
@@ -149,7 +171,7 @@ def run_scanner(threads, mode):
 def menu():
     global advancedmenu
     global target
-    printasciiart()
+    printasciiarttitle()
     # print('''
     #    ╔════════════════════════════════════════════════════════════════╗
     #    ║ 1 - Ping IP                    4 - VPN                         ║
@@ -170,6 +192,9 @@ def menu():
          A3 - PS4Resolver               A4 - Port Scanner''')
     menu_opt = input('\n      root@WibeScript:~# ')
     if menu_opt == '1':
+        clear()
+        printasciiartippinger()
+        time.sleep(0.5)
         opt1_ip = input('\n\tIP Address: ')
         os.system("ping " + opt1_ip)
         time.sleep(2.0)
@@ -212,7 +237,7 @@ def menu():
         menu()
     # exit
     if menu_opt  == '7':
-        print('\n\tMade by timothy#3273')
+        print('\n\tMade by timothy#3273 and the dodgy guy Ethanhowa#1653')
         os.system("title Wibescript Exiting.")
         time.sleep(0.5)
         os.system("title Wibescript Exiting..")
@@ -259,6 +284,9 @@ def menu():
             clear()
             menu()
     if menu_opt == 'A4':
+        clear()
+        printasciiartportscanner()
+        time.sleep(0.5)
         if advancedmenu == True:
             opta4_ip = input('\n\tIP Address: ')
             target = opta4_ip

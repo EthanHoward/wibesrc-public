@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['..\\src\\wibescript.py'],
-             pathex=['D:\\GitHub\\wibe-script\\build'],
+a = Analysis(['..\\src\\ws.py'],
+             pathex=['C:\\Users\\Ethan\\Documents\\GitHub\\wibesrc-bean\\build'],
              binaries=[],
              datas=[],
              hiddenimports=[],
